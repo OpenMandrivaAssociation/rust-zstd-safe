@@ -1,0 +1,22 @@
+--- zstd-safe-2.0.3+zstd.1.4.4/Cargo.toml       2019-11-05T19:46:40+00:00
++++ zstd-safe-2.0.3+zstd.1.4.4/Cargo.toml       2020-01-06T16:47:45.456547+00:00
+@@ -12,7 +12,7 @@
+ 
+ [package]
+ name = "zstd-safe"
+-version = "2.0.3+zstd.1.4.4"
++version = "2.0.3"
+ authors = ["Alexandre Bury <alexandre.bury@gmail.com>"]
+ description = "Safe low-level bindings for the zstd compression library."
+ readme = "Readme.md"
+@@ -26,9 +26,9 @@
+ [dependencies.zstd-sys]
+ version = "=1.4.15"
+ default-features = false
++features = ["pkgconfig"]
+ 
+ [features]
+-bindgen = ["zstd-sys/bindgen"]
+ default = ["legacy"]
+ experimental = ["zstd-sys/experimental"]
+ legacy = ["zstd-sys/legacy"]
